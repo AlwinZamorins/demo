@@ -1,0 +1,22 @@
+<div class="container" ng-controller="planController">
+    <h1>Plans</h1>
+    <form name="addPlanForm">
+        Name 
+        <input ng-minlength="2" class="form-control" ng-model="name" type="text" placeholder="Name (Minimum 3 characters!)" required/>
+        <br/> Value 
+        <input min="0" max="100" class="form-control" ng-model="value" type="number" placeholder="Value (limit 1 to 100)" required/>
+        <br/> 
+        Start Date : 
+        <datepicker date-format="EEEE MM/dd/yyyy">
+            <input class="form-control whiteBg" readonly ng-pattern="/^[/a-zA-Z 0-9]*$/" type="text" placeholder="Start Date" ng-model="startdate" required/>
+        </datepicker>
+        <br/><br/><br/>
+        End Date : 
+        <datepicker date-format="EEEE MM/dd/yyyy" date-min-limit="{{startdate| date:'MM/dd/yyyy'}}">
+            <input class="form-control whiteBg" readonly ng-pattern="/^[/a-zA-Z 0-9]*$/" type="text" placeholder="End Date (end date must be greater than start date)" ng-model="enddate" required/>
+        </datepicker>
+       <br/><br/><br/><br/>
+
+        <input ng-disabled="addPlanForm.$invalid" ng-click="add()" type="button" value="Submit" class="col-md-12 btn btn-success" />
+    </form>
+</div>

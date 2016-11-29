@@ -1,0 +1,30 @@
+.navigation-btn {
+    margin: 2%;
+    text-align: center;
+}
+.navigation-btn a{
+    width: 25%;
+}
+
+._720kb-datepicker-calendar{
+    width: 30% !important;
+}
+
+.whiteBg{
+    background-color: white !important;
+}
+
+input {
+    margin: 1%;
+    font-size: 16px !important;
+}
+
+
+
+input.ng-invalid.ng-dirty {
+    color: #A21919;
+}
+
+input.ng-valid.ng-dirty {
+    color: #318E31;
+}

@@ -1,0 +1,29 @@
+<div class="container" ng-controller="reportController">
+    <h1>Report</h1>
+    <!-- green -->
+
+    <!-- /green -->
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </thead>
+        <tbody ng-repeat="plan in plans">
+            <td>{{plan.name}}</td>
+            <!--<td></td>-->
+            <td>
+                <div class="c100 p{{plan.value}} small green">
+                    <span>{{plan.value}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+            </td>
+            <td>{{plan.startdate | date}}</td>
+            <td>{{plan.enddate | date}}</td>
+        </tbody>
+    </table>
+</div>
